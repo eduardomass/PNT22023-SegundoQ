@@ -1,0 +1,67 @@
+1) Presentacion
+2) Ver que hacen cada uno para saber quienes estan en sistemas. Con quien cursaron.
+
+3) Explicacion de importancia de conceptualidad.
+
+4) Diferencia Monolito vs WebApi
+4.1) Diferencia entre PNT1 -> PNT2, el contendio primero es mas generico. Aca nos vamos a centrar en Vue.js
+4.2) Cohesion del sistema, todo atado.
+4.3) Cliente - Servidor
+4.4) Desacoplar. No hay MVC del lado del servidor. Cliente Rico Js+Css+TypeScript
+
+
+
+5) La materia.
+5.1) Parcial + TP (TAller de PRogramación 2)
+5.2) Grupos de a 4.
+5.3) Usa la API de la materia que estan usando.
+
+6) Hablar de GIT (Push Pull Commit)
+6.1) Ejemplo entre Hola y Chau. Ramas. Diferencias con onedrive
+6.2) GitHub desktop, gitscm, gitkraken, sourcetree
+
+
+7) Programas que vamos a usar
+7.1) Visual Studio Code (Tienen que instalarlo)
+https://code.visualstudio.com/download
+7.2) Instalar nodejs.
+https://nodejs.org/en
+
+
+8) npm install vue
+9) Quokka.js
+Ctrl+Shift+P
+
+10) JavaScript
+10.1) Constantes
+constante++ error
+10.2) 
+alt 96 (backticks)
+let s = `${b} hola ${a}`
+console.log(s)
+
+10.3) Funciones
+
+function gritar()
+{
+}
+
+const gritar = function () {
+	var rta = Math.floor(Math.random()* 100)
+	return rta;
+}
+
+const gritar = () => {
+
+}
+
+const gritar = () => `${random} Hola!`
+
+10.4) Html + Js 
+script src=""
+
+11) F-12 Debigging un poco
+
+-- Ejercicio --
+Contador
+
