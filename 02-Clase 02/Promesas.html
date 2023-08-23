@@ -1,0 +1,75 @@
+<html>
+    <body>
+
+        <button onclick="getDatosTiempo()">Toca!</button>
+
+        <p>------------ PROMESAS ------------
+Generar una aplicacion donde hayan 3 corredores.
+Cada uno tiene una accion correr que tarda en llegar enrte 3 a 10 segundos.
+Hacer uso de las promesas para decir quien gano en base a la velocidad.
+
+Modificar la app para que sean 20 personas.
+
+</p>
+
+
+        <script>
+            var peliculas = [
+    { id: 1, nombre: "El Padrino", año: 1972 },
+    { id: 2, nombre: "Pulp Fiction", año: 1994 },
+    { id: 3, nombre: "El Señor de los Anillos: La Comunidad del Anillo", año: 2001 },
+    { id: 4, nombre: "Titanic", año: 1997 },
+    { id: 5, nombre: "La Lista de Schindler", año: 1993 },
+    { id: 6, nombre: "Star Wars: Episodio IV - Una Nueva Esperanza", año: 1977 },
+    // Agregar más películas aquí...
+    { id: 16, nombre: "Matrix", año: 1999 },
+    { id: 17, nombre: "Forrest Gump", año: 1994 },
+    { id: 18, nombre: "El Rey León", año: 1994 },
+    { id: 19, nombre: "Volver al Futuro", año: 1985 },
+    { id: 20, nombre: "Inception", año: 2010 }
+  ];
+
+  const getDatos = () => {
+    return peliculas;
+  }
+
+  console.log(getDatos())
+
+  const getDatosTiempo = () =>{
+    setTimeout(() => {
+        //console.log('Paso x tiempo')
+        alert('paso 1.5')
+    }, 1500);
+  }
+
+  const getDatosTiempoPromesa = () =>{
+    console.log('Inicio promesa')
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('resolviendo!!')
+            resolve(peliculas);
+        }, 2500);
+    });
+  }
+
+
+//   getDatosTiempoPromesa()
+//     .then((datos)=> console.log('Termino promesa'));
+
+async function LlamadoAsync()
+{
+    return await getDatosTiempoPromesa()
+}
+
+LlamadoAsync()
+
+    console.log('Paso 1')
+    console.log('Paso 2')
+    console.log('Paso 3')
+    console.log('Paso 4')
+
+  
+
+        </script>
+    </body>
+</html>
