@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <script>
+            const condiciones = [
+    {condicion:"Debe haber pelota", valor:false},
+    {condicion:"El equipo A tiene 11 jugadores", valor:false},
+    {condicion:"El equipo B tiene 11 jugadores", valor:false},
+    {condicion:"Todos los jugadores son mayores de 18", valor:false},
+    {condicion:"Las condiciones climaticas son buenas", valor:false},
+        ];
+
+        function ObtenerCondiciones(){
+            return (condiciones.filter(o=>o.valor == false));
+        }
+        function Validar()
+        {
+            const condicionesFiltradas = ObtenerCondiciones()
+            //alert(condicionesFiltradas.length );
+            
+            if (condicionesFiltradas.length > 0)
+            {
+                var mensaje =  condicionesFiltradas.map(o=>o.condicion + "\n")
+                alert("No se puede seguir :\n " + mensaje);
+            }
+        }
+        Validar();
+        </script>
+    </body>
+</html>
