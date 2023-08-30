@@ -1,0 +1,133 @@
+HTML:
+
+Introducción a HTML:
+
+¿Qué es HTML?
+Estructura básica de un documento HTML (etiquetas <html>, <head>, <body>).
+Encabezados y Párrafos:
+
+Etiquetas de encabezado <h1> al <h6>.
+Etiqueta de párrafo <p>.
+Listas:
+
+Listas ordenadas <ol> y listas desordenadas <ul>.
+Elementos de lista <li>.
+Enlaces:
+
+Etiqueta de enlace <a>.
+Atributo href para establecer la URL del enlace.
+Atributo target para controlar cómo se abre el enlace.
+Imágenes:
+
+Etiqueta de imagen <img>.
+Atributo src para definir la fuente de la imagen.
+Atributo alt para proporcionar un texto alternativo.
+Formularios:
+
+Etiqueta de formulario <form>.
+Elementos de entrada <input> para campos de texto y otros tipos de entrada.
+Elemento de área de texto <textarea>.
+Elemento de selección <select> y opciones <option>.
+Elementos Semánticos:
+
+Etiquetas semánticas como <header>, <nav>, <main>, <section>, <article>, <footer>.
+Tablas:
+
+Etiqueta de tabla <table>.
+Filas <tr>, encabezados de columna <th>, celdas <td>.
+Combinación de celdas con colspan y rowspan.
+JavaScript:
+
+Introducción a JavaScript:
+
+¿Qué es JavaScript?
+Incorporar JavaScript en HTML utilizando etiquetas <script>.
+Variables y Tipos de Datos:
+
+Declaración de variables (var, let, const).
+Tipos de datos: números, cadenas, booleanos.
+Operadores:
+
+Operadores aritméticos, de asignación y de comparación.
+Condicionales:
+
+Declaraciones if, else if, else.
+Operador ternario.
+Bucles:
+
+Bucle for y bucle while.
+Funciones:
+
+Declaración de funciones.
+Parámetros y argumentos.
+Retorno de valores.
+Eventos:
+
+Introducción a los eventos en JavaScript.
+Manejadores de eventos con addEventListener().
+Manipulación del DOM:
+
+Selección de elementos del DOM.
+Cambiar contenido y atributos de elementos.
+Creación de elementos nuevos.
+Interacción del Usuario:
+
+Mensajes emergentes con alert(), confirm() y prompt().
+Validación básica de formularios.
+Introducción a jQuery (opcional):
+
+Selección de elementos con jQuery.
+Manipulación del DOM con jQuery.
+Manejo de eventos con jQuery.
+Recuerda que esta es solo una guía básica. A medida que los estudiantes se sientan más cómodos con estos conceptos, puedes profundizar en cada tema y agregar ejercicios prácticos para reforzar lo aprendido.
+
+
+
+
+User
+agregar divs
+ChatGPT
+Por supuesto, agregar divs es una parte fundamental del diseño y la estructura de una página web. Aquí te presento cómo podrías incorporar divs en tu plan de enseñanza:
+
+HTML:
+
+Divs y Diseño:
+Introducción a los elementos <div> y su propósito.
+Agrupar contenido con <div> para facilitar el diseño y la estructura.
+Uso de clases y IDs para identificar divs.
+CSS (Opcional, para dar estilo a los divs):
+
+Introducción a CSS:
+
+¿Qué es CSS y por qué es importante?
+Incorporar CSS en HTML usando etiquetas <style> y archivos externos.
+Aplicando Estilos a Divs:
+
+Selección de elementos HTML en CSS.
+Modificación de propiedades como color de fondo, margen, relleno y borde.
+Uso de clases y IDs en CSS.
+Diseño de Cajas:
+
+Modelo de caja: margen, borde, relleno y contenido.
+Control de dimensiones con width y height.
+Posicionamiento con position, float y display.
+Diseño Responsivo (Opcional):
+
+Introducción al diseño responsivo y la importancia de la adaptación a diferentes dispositivos.
+Uso de media queries para ajustar estilos en pantallas de diferentes tamaños.
+Flexbox y Grid (Opcional):
+
+Introducción a Flexbox y Grid como sistemas de diseño en CSS.
+Creación de diseños flexibles y de cuadrícula.
+JavaScript (Para interacciones en los divs):
+
+Interacción con Divs en JavaScript:
+
+Manipulación de clases CSS con JavaScript.
+Agregar y eliminar clases para cambiar estilos.
+Creación de efectos de animación simples con clases.
+Eventos en Divs:
+
+Asociación de eventos a elementos <div>.
+Cambio de estilos en respuesta a eventos como click y hover.
+Recuerda que el uso de divs y CSS permitirá a tus estudiantes tener un mayor control sobre el diseño y la estructura de sus páginas web. Puedes integrar estos temas en tu plan de enseñanza gradualmente, a medida que los estudiantes adquieran confianza en los conceptos anteriores.

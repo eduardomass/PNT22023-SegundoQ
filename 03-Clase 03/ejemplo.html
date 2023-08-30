@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            .celda{
+                background-color: blue;
+            }
+            .celda:hover{
+                background-color: red;
+                height: 500px;
+            }
+
+        </style>
+        <script>
+            let i = 0;
+            function CambiarValor(){
+                i++;
+                var valor1 = document.getElementById('divForm1').innerHTML;
+                var valor2 = document.getElementById('divForm2').innerHTML;
+                document.getElementById('divForm1').innerHTML = '';
+                document.getElementById('divForm2').innerHTML = '';
+
+                for(var x=0; x < i; x++){
+                    document.getElementById('divForm1').innerHTML += valor2 + '\n';
+                    document.getElementById('divForm2').innerHTML += valor1+ '\n';
+                }
+                
+            }
+
+            function otraFuncion()
+            {
+                return "x cosa";
+            }
+
+            const funcionA = () => {
+                return "otra cosa";
+            }
+
+            const funcionB = (mensjae) => 'hola manola' + mensjae;
+
+            alert (funcionB(' larilalala'));
+        </script>
+    </head>
+    <body>
+       <div>
+        <button onclick="CambiarValor()">cambio!</button>
+       </div>
+
+
+        <div style="float: right;" id="divForm1">Hola</div>
+        <div style="float: left;" id="divForm2">Chau</div>
+
+    
+    </body>
+
+</html>
