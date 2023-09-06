@@ -1,9 +1,11 @@
 <script setup>
-defineProps({
-  personaje : {}
-})
+const { imagen, nombre } = defineProps({
+  imagen: String,
+  nombre: String, // Agregamos la propiedad "nombre"
+});
 </script>
 <template>
-  {{ personaje['name'] }}
-    
+  <img :src='imagen'> 
+  <p>{{ nombre }}</p> <!-- Mostrar la propiedad "nombre" -->
+
 </template>

@@ -4,7 +4,7 @@ import Personaje from './components/personaje.vue'
 
 const url = 'https://rickandmortyapi.com/api/character/'
 const id = ref('1')
-const personajeObtenido = ref(null)
+const personajeObtenido = ref({image :''})
 
 const ObtenerPersonaje = () => {
     fetch(url + id.value)
@@ -31,13 +31,13 @@ const ObtenerPersonaje = () => {
 <template>
     <div class="container">
         <h1>Componentes</h1>
-{{ personajeObtenido }} 
+{{ personajeObtenido.name }} 
         <hr>
         <input type="text" v-model=id >
         <hr>
         <button @click="ObtenerPersonaje()">Obtener</button>
         <hr>
-        <Personaje :personaje=personajeObtenido></Personaje>
+        <Personaje :nombre="'roberto'" :imagen=personajeObtenido.image></Personaje>
             
     </div>
 </template>
