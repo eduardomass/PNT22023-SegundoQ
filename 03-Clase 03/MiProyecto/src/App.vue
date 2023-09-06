@@ -9,7 +9,8 @@ const mostrar = ref(true)
 </script>
 
 <template>
-  <label>Mostrar : <input type="checkbox" v-model=mostrar></label>
+Esto es el App.Vue!! <hr>
+<label>Mostrar : <input type="checkbox" v-model=mostrar></label>
 
   <div v-if="mostrar">
     <h1>{{ nombre }}, {{ apellido }}</h1>
