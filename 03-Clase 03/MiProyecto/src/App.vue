@@ -1,36 +1,35 @@
 <script setup>
-import { ref } from 'vue'
-
-const nombre = ref('Eduardo')
-const apellido = ref('Mass')
-const mostrar = ref(true)
-
-
 </script>
 
 <template>
-Esto es el App.Vue!! <hr>
-<label>Mostrar : <input type="checkbox" v-model=mostrar></label>
-
-  <div v-if="mostrar">
-    <h1>{{ nombre }}, {{ apellido }}</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <router-link class="navbar-brand" to="/">Index</router-link>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+          <li class="nav-item active"><router-link class="nav-link" to="/">Componentes</router-link></li>
+          <li class="nav-item"><router-link class="nav-link"  to="/index">tarea</router-link></li>
+    </ul>
   </div>
-  <div v-else>
-    Se mouestra otroa cosa
-  </div>
-
-  <label>Valor:</label>
-  <input type="text" id="txtValor" v-model=nombre>
-
+</nav>
   
 
-  <input type="text" v-model=apellido>
-  <hr>
-  <button @click="mostrar = !mostrar">Tocame!</button>
+  <!-- Contenido principal -->
+  <div class="container" style="margin-top:70px; margin-bottom:60px;">
+    <RouterView></RouterView>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer navbar-fixed-bottom">
+    <div class="container">
+      <p class="text-muted">Derechos reservados © 2023</p>
+    </div>
+  </footer>
+
+
 </template>
 
 <style scoped>
-h1{
-  font-size: 50px;
-}
 </style>
