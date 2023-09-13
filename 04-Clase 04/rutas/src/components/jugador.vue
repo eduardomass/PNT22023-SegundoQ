@@ -1,29 +1,32 @@
 <template>
-
+<div class="border">
 <h1> Jugador : {{ nombre }}</h1>
-{{ staminaRef }}
-<button @click="Lastimar(50)">Lastimar</button>
+<hr>
+Stamina  : {{ stamina }}
+<hr>
+<button @click="emitLastimar">Lastimar</button>
+</div>
 </template>
 
 <script setup>
-import {ref, onMounted} from 'vue'
+import {ref, onMounted, defineEmits } from 'vue'
 
+const emit = defineEmits();
 
 onMounted(() => {
     //Al comenzar llamo a obtener los personajes
-    staminaRef.value = 0
+    //staminaRef.value = props.stamina
 })
 const props = defineProps({
     stamina : null,
     nombre : String
 });
-const staminaRef = ref(0)
 
-const Lastimar = function (valor) 
-{
-    debugger
-    console.log('lastimar', valor);
-    staminaRef.value = staminaRef.value -(valor)
-}
+
+
+const emitLastimar = () => {
+  const randomDamage = Math.floor(Math.random() * 100) + 1;
+  emit('Lastimar', -randomDamage);
+};
 
 </script>
