@@ -12,7 +12,8 @@ const props = defineProps({
     <h5 class="card-title">{{ props.personaje.name }}</h5>
     <p class="card-text">Status : {{ props.personaje.status }}</p>
     <p class="card-text">Species : {{ props.personaje.species }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <button @click="$emit('Saludar')">Emitir mensaje!</button>
+    <button @click="$emit('Maldecir')">Maldecir</button>
   </div>
 </div>
 </template>

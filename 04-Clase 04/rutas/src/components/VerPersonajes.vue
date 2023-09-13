@@ -31,8 +31,15 @@ onMounted(() => {
     ObtenerPersonaje()
 })
 
+const Hola = () =>{
+    alert('Saludando desde Ver Personaje')
+}
+
 const Seleccionar = (indice) => {
     personajeSeleccionado.value = listaPersonajes.value[indice]
+}
+const Insultar = () =>{
+    alert('Boca sucia!')
 }
 const Actualizar = (valor) => {
     //recibe el cambio de pagina como +1 o -1
@@ -66,10 +73,13 @@ const Actualizar = (valor) => {
         </div>
         <div class="col-6">
             <div class="row">
-                <Personaje v-if="personajeSeleccionado != null" :personaje="personajeSeleccionado"></Personaje>
+                <Personaje @Maldecir="Insultar" @Saludar="Insultar"
+                v-if="personajeSeleccionado != null" 
+                :personaje="personajeSeleccionado"></Personaje>
             </div>
             <div class="row">
-                <Episodios  v-if="personajeSeleccionado != null" :episodios="personajeSeleccionado.episode">
+                <Episodios  v-if="personajeSeleccionado != null" 
+                :episodios="personajeSeleccionado.episode">
                     
                 </Episodios>
             </div>

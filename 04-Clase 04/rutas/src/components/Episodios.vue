@@ -43,6 +43,7 @@ watch(
 </script>
 
 <template>
+  {{ episodios }}
   <hr>
   <div class="card">
     <div class="card-body">
