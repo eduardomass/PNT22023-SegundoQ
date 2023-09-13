@@ -7,6 +7,7 @@ import VerPersonajes from './components/VerPersonajes.vue'
 import Episodios from './components/Episodios.vue'
 import Tarea from './components/Tarea.vue'
 import Explicacion from './components/Explicaciones.vue'
+import MiGuerra from './components/guerra.vue'
 
 const routes = [
     {
@@ -25,6 +26,10 @@ const routes = [
     {
       path: '/explicacion',
       component: Explicacion,
+    },
+    {
+      path: '/guerra',
+      component: MiGuerra,
     },
   ];
   

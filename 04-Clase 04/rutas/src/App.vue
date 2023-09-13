@@ -21,6 +21,10 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/explicacion">explicacion de clase 4</router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" 
+          to="/guerra">GUERRA!!</router-link>
+        </li>
       </ul>
     </div>
 
