@@ -1,10 +1,11 @@
 <template>
-<div class="border">
-<h1> Jugador : {{ nombre }}</h1>
-<hr>
-Stamina  : {{ stamina }}
-<hr>
-<button @click="emitLastimar">Lastimar</button>
+  <div class="card" style="width: 18rem;">
+  
+  <div class="card-body">
+    <h5 class="card-title">{{ nombre }}</h5>
+    <p class="card-text">{{ stamina }}</p>
+    <button :disabled="!miTurno" @click="emitLastimar">Lastimar</button>
+  </div>
 </div>
 </template>
 
@@ -17,9 +18,12 @@ onMounted(() => {
     //Al comenzar llamo a obtener los personajes
     //staminaRef.value = props.stamina
 })
+
+
 const props = defineProps({
     stamina : null,
-    nombre : String
+    nombre : String,
+    miTurno : false
 });
 
 

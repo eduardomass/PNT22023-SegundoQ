@@ -8,9 +8,10 @@ import Episodios from './components/Episodios.vue'
 import Tarea from './components/Tarea.vue'
 import Explicacion from './components/Explicaciones.vue'
 import MiGuerra from './components/guerra.vue'
+import TuGuerra from './components/guerrados.vue'
 
 const routes = [
-    {
+  {
       path: '/Personajes',
       component: VerPersonajes,
     },
@@ -30,6 +31,10 @@ const routes = [
     {
       path: '/guerra',
       component: MiGuerra,
+    },
+    {
+      path : '/guerrados',
+      component: TuGuerra
     },
   ];
   
