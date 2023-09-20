@@ -1,7 +1,10 @@
 <template>
+    <div class="row" >
+        <button :disabled=juegoActivo class="btn btn-danger" @click="iniciar()">Iniciar</button>
+    </div>
     <div class="row">
         <div class="col-12">
-            {{ mensaje }}
+            {{ mensajeGanador }}
         </div>
     </div>
     <div class="row">
@@ -34,7 +37,7 @@
     </div>
 </template>
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed, watch } from 'vue'
 
 const lastimar = (jugador) => {
     var numeroAleatorio = Math.floor(Math.random() * 25) + 15;
@@ -52,12 +55,12 @@ const accionar = (jugador, valor) => {
 
 const jugador1 = ref({
     nombre: '',
-    stamina: 99,
+    stamina: 0,
     esMiTurno : false
 })
 const jugador2 = ref({
     nombre: '',
-    stamina: 100,
+    stamina: 0,
     esMiTurno : false
 })
 
@@ -67,10 +70,26 @@ onMounted(() => {
     jugador2.value.nombre = 'Ricardo'
 });
 
+const iniciar = () => {
+    jugador1.value.esMiTurno = true
+    jugador1.value.stamina = 100
+    jugador2.value.esMiTurno = false
+    jugador2.value.stamina = 100
+}
 
 const mensaje = computed(() => {
     let valor = jugador1.value.esMiTurno ? jugador1.value.nombre : jugador2.value.nombre
       return `Hola, ${valor}!`;
+    });
+
+    const mensajeGanador = computed(() => {
+        if (jugador1.value.stamina < 0 || jugador2.value.stamina < 0 ){
+            let valor = jugador1.value.stamina <= 0 ? jugador2.value.nombre : jugador1.value.nombre
+            return `Gano!, ${valor}!`;
+        }
+        else
+        return "No hay ganador"   
+        
     });
 
     const juegoActivo = computed(() => {
