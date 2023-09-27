@@ -28,7 +28,8 @@
   <h4>3) Cuando alguno llega a 0 o menos debe decir quien gano </h4>
   <h4>4) El boton de Lastimar/Curar deberia desactivaarse cuando no es mi turno </h4> -->
   <hr>
-
+  {{accionesRef}}
+<hr>
   <div id="juego" class="container">
     <div class="row">
       <div class="col-12">
@@ -49,8 +50,11 @@
 import { ref, onMounted } from 'vue'
 import Jugador from './jugador.vue'
 
-const jugador1 = ref(null)
+import { useStoreBitacora } from '/stores/storeBitacora'
+const store = useStoreBitacora()
 
+const jugador1 = ref(null)
+const accionesRef = ref(store.acciones)
 const staminaEduardo = ref(111)
 const staminaCarlos = ref(222)
 let turno1 = ref(false)
@@ -60,6 +64,7 @@ let turno2 = ref(false)
 const Empezar = () =>{
   turno1.value = true
   turno2.value = false
+  store.agregarAccion('Hola')
 }
 const LastimarJugador = (valor) => {
   staminaEduardo.value = staminaEduardo.value + (valor)

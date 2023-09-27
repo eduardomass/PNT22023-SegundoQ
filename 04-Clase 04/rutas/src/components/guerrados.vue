@@ -35,9 +35,14 @@
             </div>
         </div>
     </div>
+    <hr>
+    {{ store.acciones }}
 </template>
 <script setup>
 import { ref, onMounted, computed, watch } from 'vue'
+import { useStoreBitacora } from '/stores/storeBitacora'
+
+const store = useStoreBitacora()
 
 const lastimar = (jugador) => {
     var numeroAleatorio = Math.floor(Math.random() * 25) + 15;

@@ -1,6 +1,7 @@
 
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router';
+import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import VerPersonajes from './components/VerPersonajes.vue'
@@ -9,6 +10,12 @@ import Tarea from './components/Tarea.vue'
 import Explicacion from './components/Explicaciones.vue'
 import MiGuerra from './components/guerra.vue'
 import TuGuerra from './components/guerrados.vue'
+
+import Uno from './components/uno.vue'
+import Dos from './components/dos.vue'
+
+import Boton from './components/boton.vue'
+
 
 const routes = [
   {
@@ -36,6 +43,17 @@ const routes = [
       path : '/guerrados',
       component: TuGuerra
     },
+    {
+      path : '/uno',
+      component: Uno
+    },
+    {
+      path : '/dos',
+      component: Dos
+    }, {
+      path : '/boton',
+      component: Boton
+    },
   ];
   
   const router = createRouter({
@@ -43,7 +61,9 @@ const routes = [
     routes,
   });
 
+  const pinia = createPinia()
   const app = createApp(App); // Cambia el componente inicial si es necesario
-
+  
+  app.use(pinia)
   app.use(router);
   app.mount('#app');

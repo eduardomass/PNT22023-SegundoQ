@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <router-link class="navbar-brand" to="/tarea">Ver tarea</router-link>
@@ -24,13 +21,21 @@
           <router-link class="nav-link" 
           to="/guerra">GUERRA!!</router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" 
+          to="/uno">uno</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" 
+          to="/dos">dos</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/boton/">Boton</router-link>
+        </li>
       </ul>
     </div>
 
   </nav>
-
-  <hr>
-
 
   <div class="container">
     <RouterView></RouterView>
