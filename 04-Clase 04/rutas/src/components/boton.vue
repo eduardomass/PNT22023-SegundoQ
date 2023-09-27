@@ -1,4 +1,14 @@
+
 <template>
+<ol>
+    <li>Hacer que el turno sea switcheable con mockapi</li>
+    <li>Hacer que la stamina se envie de un lado al otro (agregarlo como campo en la tabla de mockapi)</li>
+    <li>Agregar tambien mensaje de accion que se realiza</li>
+    <li>Poder personalizar un mensaje cuando hace la accion</li>
+    <li>Poder personalizar un mensaje enviado en cualquier momento</li>
+</ol>
+<hr>
+
     Sala: 
     {{sala}}
     <button @click="Actualizar()">Actualizar el valor en 1</button>
@@ -9,6 +19,7 @@ const url = 'https://65136dfe8e505cebc2e9d545.mockapi.io/guerra/salas/2'
 const sala = ref({})
 
 const Actualizar = () => {
+    ObtenerValorSala()
     let turnoDe = sala.value.turnode;
     turnoDe++;
     fetch(url, {
@@ -29,6 +40,7 @@ const Actualizar = () => {
 }
 
 const ObtenerValorSala = () => {
+    console.log('Llamando')
     //Arma el link con la pagina 
     fetch(url)
         .then(response => {
@@ -39,7 +51,6 @@ const ObtenerValorSala = () => {
             }
         })
         .then(data => {
-            debugger
             sala.value = data //Obtengo el results que es donde esta mi vector que quiero trabajar
         })
         .catch(error => {
@@ -48,6 +59,7 @@ const ObtenerValorSala = () => {
 }
 
 onMounted(() => {
+    const intervalo = setInterval(ObtenerValorSala, 1000)
     ObtenerValorSala()
 })
 
